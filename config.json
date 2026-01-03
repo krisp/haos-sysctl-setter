@@ -1,0 +1,19 @@
+{
+  "name": "Sysctl Setter",
+  "version": "0.1.0",
+  "slug": "sysctl_setter",
+  "description": "Runs sysctl commands on host OS",
+  "startup": "once",
+  "boot": "manual",
+  "hassio_api": false,
+  "host_network": true,
+  "privileged": ["SYS_ADMIN"],
+  "host_dbus": false,
+  "full_access": true,
+  "options": {
+    "sysctl_command": "sysctl -w net.ipv6.conf.enp1s0.accept_ra=2"
+  },
+  "schema": {
+    "sysctl_command": "str"
+  }
+}
